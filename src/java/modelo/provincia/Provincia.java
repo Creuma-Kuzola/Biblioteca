@@ -11,4 +11,33 @@ package modelo.provincia;
  */
 public class Provincia {
     
+    private int idProvincia;
+    private String nomeProvincia;
+    private int fkPais;
+
+    public int getIdProvincia() {
+        return idProvincia;
+    }
+
+    public void setIdProvincia(int idProvincia) {
+        this.idProvincia = idProvincia;
+    }
+
+    public String getNomeProvincia() {
+        return nomeProvincia;
+    }
+
+    public void setNomeProvincia(String nomeProvincia) {
+        this.nomeProvincia = nomeProvincia;
+    }
+
+    public int getFkPais() {
+        return fkPais;
+    }
+
+    public void setFkPais(int fkPais) {
+        this.fkPais = fkPais;
+    }
+    
+    
 }

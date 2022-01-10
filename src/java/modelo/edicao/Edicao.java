@@ -11,4 +11,24 @@ package modelo.edicao;
  */
 public class Edicao {
     
+    private int idEdicao;
+    private int numEdicao;
+
+    public int getIdEdicao() {
+        return idEdicao;
+    }
+
+    public void setIdEdicao(int idEdicao) {
+        this.idEdicao = idEdicao;
+    }
+
+    public int getNumEdicao() {
+        return numEdicao;
+    }
+
+    public void setNumEdicao(int numEdicao) {
+        this.numEdicao = numEdicao;
+    }
+    
+    
 }

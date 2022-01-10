@@ -11,4 +11,33 @@ package modelo.municipio;
  */
 public class Municipio {
     
+    private int idMunicipio;
+    private String nomeMunicipio;
+    private int fkProvincia;
+
+    public int getIdMunicipio() {
+        return idMunicipio;
+    }
+
+    public void setIdMunicipio(int idMunicipio) {
+        this.idMunicipio = idMunicipio;
+    }
+
+    public String getNomeMunicipio() {
+        return nomeMunicipio;
+    }
+
+    public void setNomeMunicipio(String nomeMunicipio) {
+        this.nomeMunicipio = nomeMunicipio;
+    }
+
+    public int getFkProvincia() {
+        return fkProvincia;
+    }
+
+    public void setFkProvincia(int fkProvincia) {
+        this.fkProvincia = fkProvincia;
+    }
+    
+    
 }

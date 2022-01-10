@@ -11,4 +11,33 @@ package modelo.leitor;
  */
 public class Leitor {
     
+    private int idLeitor;
+    private int fkPessoa;
+    private String dataCadastroLeitor;
+
+    public int getIdLeitor() {
+        return idLeitor;
+    }
+
+    public void setIdLeitor(int idLeitor) {
+        this.idLeitor = idLeitor;
+    }
+
+    public int getFkPessoa() {
+        return fkPessoa;
+    }
+
+    public void setFkPessoa(int fkPessoa) {
+        this.fkPessoa = fkPessoa;
+    }
+
+    public String getDataCadastroLeitor() {
+        return dataCadastroLeitor;
+    }
+
+    public void setDataCadastroLeitor(String dataCadastroLeitor) {
+        this.dataCadastroLeitor = dataCadastroLeitor;
+    }
+    
+    
 }

@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo.classificacao;
+package modelo.estado;
 
 /**
  *
  * @author creuma
  */
-public class Classificacao {
-    
-    private int idClassificacao;
+public class Estado {
+ 
+    private int idEstado;
     private String designacao;
 
-    public int getIdClassificacao() {
-        return idClassificacao;
+    public int getIdEstado() {
+        return idEstado;
     }
 
-    public void setIdClassificacao(int idClassificacao) {
-        this.idClassificacao = idClassificacao;
+    public void setIdEstado(int idEstado) {
+        this.idEstado = idEstado;
     }
 
     public String getDesignacao() {
@@ -29,6 +29,5 @@ public class Classificacao {
     public void setDesignacao(String designacao) {
         this.designacao = designacao;
     }
-    
     
 }

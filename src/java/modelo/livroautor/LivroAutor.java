@@ -11,4 +11,23 @@ package modelo.livroautor;
  */
 public class LivroAutor {
     
+    private int fkAutor;
+    private int fkLivro;
+
+    public int getFkAutor() {
+        return fkAutor;
+    }
+
+    public void setFkAutor(int fkAutor) {
+        this.fkAutor = fkAutor;
+    }
+
+    public int getFkLivro() {
+        return fkLivro;
+    }
+
+    public void setFkLivro(int fkLivro) {
+        this.fkLivro = fkLivro;
+    }
+    
 }

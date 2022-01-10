@@ -11,4 +11,24 @@ package modelo.descritor;
  */
 public class Descritor {
     
+    private int idDescritor;
+    private String descritor;
+
+    public int getIdDescritor() {
+        return idDescritor;
+    }
+
+    public void setIdDescritor(int idDescritor) {
+        this.idDescritor = idDescritor;
+    }
+
+    public String getDescritor() {
+        return descritor;
+    }
+
+    public void setDescritor(String descritor) {
+        this.descritor = descritor;
+    }
+    
+    
 }
