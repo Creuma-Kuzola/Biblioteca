@@ -5,6 +5,9 @@
  */
 package modelo.pessoa;
 
+import java.text.SimpleDateFormat;
+import java.sql.Date;
+
 /**
  *
  * @author creuma
@@ -16,11 +19,11 @@ public class Pessoa {
     private String ultimoNome;
     private int fkTelefone;
     private String numBi;
-    private String dataNasc;
+    private Date dataNasc;
     private int fkEmail;
     private int fkMorada;
     private int fkSexo;
-    private String dataCadastroPessoa;
+    private Date dataCadastroPessoa;
 
     public int getIdPessoa() {
         return idPessoa;
@@ -62,11 +65,12 @@ public class Pessoa {
         this.numBi = numBi;
     }
 
-    public String getDataNasc() {
+    public Date getDataNasc() {
         return dataNasc;
     }
+    
 
-    public void setDataNasc(String dataNasc) {
+    public void setDataNasc(Date dataNasc) {
         this.dataNasc = dataNasc;
     }
 
@@ -94,12 +98,18 @@ public class Pessoa {
         this.fkSexo = fkSexo;
     }
 
-    public String getDataCadastroPessoa() {
+    public Date getDataCadastroPessoa() {
         return dataCadastroPessoa;
     }
 
-    public void setDataCadastroPessoa(String dataCadastroPessoa) {
+    public void setDataCadastroPessoa(Date dataCadastroPessoa) {
         this.dataCadastroPessoa = dataCadastroPessoa;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + "idPessoa=" + idPessoa + ", primeiroNome=" + primeiroNome + ", ultimoNome=" + ultimoNome + ", fkTelefone=" + fkTelefone + ", numBi=" + numBi + ", dataNasc=" + dataNasc + ", fkEmail=" + fkEmail + ", fkMorada=" + fkMorada + ", fkSexo=" + fkSexo + ", dataCadastroPessoa=" + dataCadastroPessoa + '}';
+    }
+    
     
 }

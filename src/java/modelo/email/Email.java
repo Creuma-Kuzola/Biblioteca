@@ -13,6 +13,7 @@ public class Email {
     
     private int idEmail;
     private String email;
+    private int fkIDPessoa;
 
     public int getIdEmail() {
         return idEmail;
@@ -29,5 +30,19 @@ public class Email {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+    public int getFkIDPessoa() {
+        return fkIDPessoa;
+    }
+
+    public void setFkIDPessoa(int fkIDPessoa) {
+        this.fkIDPessoa = fkIDPessoa;
+    }
+
+    @Override
+    public String toString() {
+        return "Email{" + "idEmail=" + idEmail + ", email=" + email + ", fkIDPessoa=" + fkIDPessoa + '}';
+    }
+     
     
 }

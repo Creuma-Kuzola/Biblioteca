@@ -38,6 +38,11 @@ public class Municipio {
     public void setFkProvincia(int fkProvincia) {
         this.fkProvincia = fkProvincia;
     }
+
+    @Override
+    public String toString() {
+        return "Municipio{" + "idMunicipio=" + idMunicipio + ", nomeMunicipio=" + nomeMunicipio + ", fkProvincia=" + fkProvincia + '}';
+    }
     
     
 }

@@ -38,6 +38,11 @@ public class Provincia {
     public void setFkPais(int fkPais) {
         this.fkPais = fkPais;
     }
+
+    @Override
+    public String toString() {
+        return "Provincia{" + "idProvincia=" + idProvincia + ", nomeProvincia=" + nomeProvincia + ", fkPais=" + fkPais + '}';
+    }
     
     
 }

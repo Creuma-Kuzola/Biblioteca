@@ -29,6 +29,12 @@ public class Sexo {
     public void setDesignacao(String designacao) {
         this.designacao = designacao;
     }
+
+    @Override
+    public String toString() {
+        return "Sexo{" + "idSexo=" + idSexo + ", designacao=" + designacao + '}';
+    }
+    
     
     
 }

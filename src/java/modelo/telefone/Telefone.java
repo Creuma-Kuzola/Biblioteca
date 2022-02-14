@@ -13,6 +13,7 @@ public class Telefone {
  
     private int idTelefone;
     private String numTelefone;
+     private int fkIdPessoa;
 
     public int getIdTelefone() {
         return idTelefone;
@@ -28,6 +29,19 @@ public class Telefone {
 
     public void setNumTelefone(String numTelefone) {
         this.numTelefone = numTelefone;
+    }
+
+    public int getFkIdPessoa() {
+        return fkIdPessoa;
+    }
+
+    public void setFkIdPessoa(int fkIdPessoa) {
+        this.fkIdPessoa = fkIdPessoa;
+    }
+
+    @Override
+    public String toString() {
+        return "Telefone{" + "idTelefone=" + idTelefone + ", numTelefone=" + numTelefone + ", fkIdPessoa=" + fkIdPessoa + '}';
     }
     
     

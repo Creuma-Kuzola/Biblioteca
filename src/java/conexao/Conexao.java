@@ -6,17 +6,20 @@
 package conexao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import modelo.pessoa.Pessoa;
+import modelo.pessoa.PessoaDAO;
 /**
  *
  * @author creuma
  */
 public class Conexao {
     
-    private static final String DBURL = "jdbc:postgresql://localhost:5432/biblioteca";
+   private static final String DBURL = "jdbc:postgresql://localhost:5432/biblioteca";
    private static final String USER = "postgres";
    private static final String PASSWORD = "admin";
    private static final String DRIVER = "org.postgresql.Driver";  
@@ -79,7 +82,22 @@ public class Conexao {
     
     public static void main(String[] args) throws SQLException, ClassNotFoundException
     {
-        closeConnection(getConnection());        
+        closeConnection(getConnection());  
+        Pessoa pessoa = new Pessoa ();
+        String st = "2022-01-17";
+        Date data = Date.valueOf(st);
+        
+        
+        PessoaDAO pessoaDAO = new PessoaDAO();
+        pessoa.setIdPessoa(1);
+        pessoa.setPrimeiroNome("Creuma");
+        pessoa.setUltimoNome("Kuzola");
+        pessoa.setDataCadastroPessoa(data);
+        pessoa.setDataNasc(data);
+        pessoa.setNumBi("sdfghjkghjk12347asdfghjhg");
+        pessoaDAO.inserir(pessoa);
+        System.out.println("Insercao realizada com sucesso");
+        
     }
     
 }
