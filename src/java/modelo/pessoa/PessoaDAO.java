@@ -99,6 +99,36 @@ public class PessoaDAO {
         }
     }
     
+    public ArrayList<Pessoa> listarPessoas(){
+    
+           
+        try {
+            conexao = Conexao.getConnection();
+            consulta = "SELECT * FROM pessoa";
+            prepared = conexao.prepareStatement(consulta);
+            resultset = prepared.executeQuery();
+            ArrayList <Pessoa> listaPessoa = new ArrayList<Pessoa>();
+            Pessoa pessoaItem;
+            
+            while(resultset.next())
+            {
+                pessoaItem = new Pessoa();
+                pessoaItem.setPrimeiroNome(resultset.getString("primeironome"));
+                pessoaItem.setUltimoNome(resultset.getString("ultimonome"));
+                pessoaItem.setIdPessoa(resultset.getInt("idpessoa"));
+                pessoaItem.setNumBi(resultset.getString("numbi"));
+                pessoaItem.setDataNasc(resultset.getDate("datanasc"));
+                listaPessoa.add(pessoaItem);
+            }
+            Conexao.closeConnectionResultSet(conexao, resultset);
+            return listaPessoa;
+        } catch (SQLException ex) {
+            Logger.getLogger(PessoaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+
+    }
+    
    /* public void inserirTelefone(TelefoneDAO telefoneDao){
         
         try {

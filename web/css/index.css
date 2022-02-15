@@ -1,1 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+@font-face {
+    font-family: "Leckerli One";
+    src: url('../fonts/LeckerliOne-Regular.ttf');
+}
+
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-Regular.ttf');
+}
+
+.nav-div{
+    width: 80vw;
+    height: 8vh;
+    background-color: #c4c4c4;
+    margin-left: 20vw;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: "Source Sans Pro";
+}
+
+input[type="search"]{
+    border: none;
+    width: 20vw;
+    height:4vh ;
+    border-radius: 0.4vw;
+    margin-top: 2vh;
+    background-color:#f7f7f7;
+    margin-left: 40vw;
+    padding-left: 1vw;
+}
+
+.section-div{
+
+    width: 20vw;
+    height: 100vh;
+    background-color:#38B6FF;
+    position: absolute;
+    top: 0;
+}
+
+.h1-nome-biblioteca{
+    color: #fff;
+    font-family: "Leckerli One";
+    text-align: center;
+    padding-top: 2vw;
+}
+
+.ul-div{
+    width: 20vw;
+    height: 70vh;
+    font-size: 1.3vw;
+}
+
+.ul-div li{
+    margin-bottom: 1.5vw;
+    margin-left: 2vw; 
+    list-style: none;
+    padding-bottom: 1vw;
+    width: 16vw;
+    padding: 1vh;
+    border-radius: 0.4vw;
+}
+
+.ul-div li:nth-child(1){
+    margin-top: 3vw;
+    background-color:#fff;
+    font-weight: bolder;
+}
+
+.ul-div li a {
+    color: #222;
+    padding: 0.2vw;
+    text-decoration: none;
+    
+}
+
+.ul-div li:hover{
+
+    background-color: #fff;
+}
+
+
+.ul-div li a[href="#"]{
+    
+}
+
+.btn-nova-pessoa{
+    border: none;
+    background-color: #38B6FF;
+    padding: 0.5vw;
+    width: 10vw;
+    cursor: pointer;
+    margin-left: 25vw;
+    margin-top: 10vh;
+}
+
+.btn-nova-pessoa:hover{
+    background-color: #0599ee;
+    color: #fff;
+    font-weight: bold;
+}
+
+.main-section{
+
+    width: 70vw;
+    height: 70vh;
+    background-color: #f1f1f1;
+    margin-top: 2vh;
+    margin-left: 25vw;
+}
+/*
+.table-main{
+    background-color: red;
+    width: 100vw;
+    height: 40vh;
+    margin-left: 10vw;
+}
+*/
