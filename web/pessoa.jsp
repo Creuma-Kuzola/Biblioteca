@@ -1,8 +1,9 @@
 <%-- 
-    Document   : index
-    Created on : Feb 15, 2022, 6:35:37 AM
+    Document   : pessoa
+    Created on : Jan 25, 2022, 3:50:00 PM
     Author     : creuma
 --%>
+
 <%@page import="modelo.pessoa.Pessoa"%>
 <%@page import="modelo.pessoa.PessoaDAO"%>
 <%@page import="java.util.ArrayList"%>
@@ -11,11 +12,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Index</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/index.css">
+        <title>Pessoa</title>
+        <link rel="stylesheet" href="css/cadastropessoa.css">
     </head>
     <body>
+
          <header class="header-div">
             <nav class="nav-div">
                 <input type="search" placeholder="pesquisar">
@@ -24,8 +25,8 @@
         <section class="section-div">
             <h1 class="h1-nome-biblioteca">Leia-Biblioteca</h1>
             <ul class="ul-div">
-                <li> <a href="#">Index</a></li>
-                <li> <a href="pessoa.jsp">Pessoa</a></li>
+                <li> <a href="index.jsp">Index</a></li>
+                <li> <a href="#">Pessoa</a></li>
                 <li> <a href="cadastroLeitor.jsp">Leitor</a> </li>
                 <li> <a href="cadastroAutor.jsp">Autor</a></li>
                 <li><a href="">Editora</a></li>
@@ -34,8 +35,7 @@
               
             </ul>
         </section>
-
-        <button onclick="window.location.href='cadastroPessoa.jsp'" class="btn-nova-pessoa">Nova Pessoa</button>
+                <button onclick="window.location.href='cadastroPessoa.jsp'" class="btn-nova-pessoa">Nova Pessoa</button>
         <section class="main-section"> 
           <table width="100%" class="table-main"> 
                 <thead>
