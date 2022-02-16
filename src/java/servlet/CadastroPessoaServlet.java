@@ -5,10 +5,13 @@
  */
 package servlet;
 
+import conexao.Conexao;
 import conexao.TratamentoDeDatas;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -36,13 +39,14 @@ public class CadastroPessoaServlet extends HttpServlet {
 
     Pessoa pessoa = new Pessoa();
     PessoaDAO pessoaDAO = new PessoaDAO();
-    EmailDAO emailDao = new EmailDAO ();
+    EmailDAO emailDao = new EmailDAO();
     Email email = new Email();
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            
+
             //TelefoneDAO telefoneDao = new TelefoneDAO ();
             //Telefone telefone = new Telefone();
             pessoa.setPrimeiroNome(request.getParameter("primeiroNome").trim());
@@ -50,33 +54,47 @@ public class CadastroPessoaServlet extends HttpServlet {
             pessoa.setDataNasc(TratamentoDeDatas.converterDataNormalParaDataSQL(request.getParameter("dataNasc")));
             //pessoa.setFkSexo(new SexoDAO().getIDSexo(request.getParameter("sexo").trim()));
             pessoa.setNumBi(request.getParameter("numbi").trim());
-            
+
             long millis = System.currentTimeMillis();
             java.sql.Date date = new java.sql.Date(millis);
-            
+
             pessoa.setDataCadastroPessoa(date);
             pessoaDAO.inserir(pessoa);
-            
-            System.out.println(""+ pessoa.toString());
-      
-            System.out.println(" Id da pessoa encontrada "+pessoaDAO.getUltimaPessoaInserida());
+
+            System.out.println("" + pessoa.toString());
+
+            System.out.println(" Id da pessoa encontrada " + pessoaDAO.getUltimaPessoaInserida());
             int idPessoa = pessoaDAO.getUltimaPessoaInserida();
-            if(idPessoa != 0){
+            if (idPessoa != 0) {
                 email.setEmail(request.getParameter("email").trim());
                 emailDao.inserir(email.getEmail());
-                pessoaDAO.inserirEmail(emailDao.getLastInsertedEmail());
+                int idEmail = emailDao.getLastInsertedEmail(pessoaDAO.getUltimaPessoaInserida());
+
+                try {
+
+                    Connection conexao = Conexao.getConnection();
+                    String consulta = "UPDATE pessoa SET fkemail = ? WHERE idpessoa = ?";
+                    System.out.println(consulta);
+                    System.out.println("Em inserir email: " + idEmail + " " + idPessoa + " Meu: " + idPessoa);
+                    PreparedStatement executer = conexao.prepareStatement(consulta);
+                    executer.setInt(1, idEmail);
+                    executer.setInt(2, idPessoa);
+
+                    executer.execute();
+                } catch (Exception e) {
+                    System.err.println(e.toString());
+                }
+
+                //pessoaDAO.inserirEmail(idPessoa, );
                 System.out.println("Salvou");
-                response.sendRedirect("listarPessoa.jsp");
-            }
-            else{
+                response.sendRedirect("pessoa.jsp");
+            } else {
                 response.sendRedirect("error.jsp");
             }
-            
+
             /*telefone.setNumTelefone(request.getParameter("telefone"));
             telefoneDao.inserir(telefone);
             pessoaDAO.inserirTelefone(telefoneDao);*/
-           
-            
         } catch (SQLException ex) {
             Logger.getLogger(CadastroPessoaServlet.class.getName()).log(Level.SEVERE, null, ex);
         }

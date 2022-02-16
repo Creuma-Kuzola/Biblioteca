@@ -3,10 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/src/java/modelo/email/EmailDAO.java</file>
+            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/web/autor.jsp</file>
+            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/src/java/servlet/CadastroAutorServlet.java</file>
+            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/src/java/modelo/leitor/Leitor.java</file>
+            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/web/cadastroAutor.jsp</file>
+            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/src/java/servlet/CadastroLeitorServlet.java</file>
+            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/src/java/modelo/autor/AutorDAO.java</file>
             <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/src/java/modelo/pessoa/PessoaDAO.java</file>
-            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/src/java/servlet/CadastroPessoaServlet.java</file>
-            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/web/cadastroPessoa.jsp</file>
+            <file>file:/home/creuma/Documents/1%23ProjectosGitHub/Biblioteca/Biblioteca/src/java/modelo/autor/Autor.java</file>
         </group>
     </open-files>
 </project-private>

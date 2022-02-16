@@ -5,6 +5,8 @@
  */
 package modelo.leitor;
 
+import java.sql.Date;
+
 /**
  *
  * @author creuma
@@ -13,7 +15,7 @@ public class Leitor {
     
     private int idLeitor;
     private int fkPessoa;
-    private String dataCadastroLeitor;
+    private Date dataCadastroLeitor;
 
     public int getIdLeitor() {
         return idLeitor;
@@ -31,11 +33,11 @@ public class Leitor {
         this.fkPessoa = fkPessoa;
     }
 
-    public String getDataCadastroLeitor() {
+    public Date getDataCadastroLeitor() {
         return dataCadastroLeitor;
     }
 
-    public void setDataCadastroLeitor(String dataCadastroLeitor) {
+    public void setDataCadastroLeitor(Date dataCadastroLeitor) {
         this.dataCadastroLeitor = dataCadastroLeitor;
     }
     

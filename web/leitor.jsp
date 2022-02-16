@@ -1,22 +1,22 @@
 <%-- 
-    Document   : pessoa
-    Created on : Jan 25, 2022, 3:50:00 PM
+    Document   : leitor
+    Created on : Feb 15, 2022, 8:29:21 AM
     Author     : creuma
 --%>
 
+<%@page import="modelo.leitor.LeitorDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="modelo.pessoa.Pessoa"%>
 <%@page import="modelo.pessoa.PessoaDAO"%>
-<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Pessoa</title>
-        <link rel="stylesheet" href="css/cadastropessoa.css">
+        <link rel="stylesheet" href="css/leitor.css"
+        <title>Leitor</title>
     </head>
     <body>
-
          <header class="header-div">
             <nav class="nav-div">
                 <input type="search" placeholder="pesquisar">
@@ -26,31 +26,29 @@
             <h1 class="h1-nome-biblioteca">Leia-Biblioteca</h1>
             <ul class="ul-div">
                 <li> <a href="index.jsp">Index</a></li>
-                <li> <a href="#">Pessoa</a></li>
+                <li> <a href="pessoa.jsp">Pessoa</a></li>
                 <li> <a href="leitor.jsp">Leitor</a> </li>
-                <li> <a href="cadastroAutor.jsp">Autor</a></li>
-                <li><a href="">Editora</a></li>
-                <li><a href="cadastroLivro.jsp">Livro</a></li>
-                <li><a href="cadastroRequisicao.jsp">Requisação</a></li>
-              
+                <li> <a href="autor.jsp">Autor</a></li>
+                <li><a href="editora.jsp">Editora</a></li>
+                <li><a href="livro.jsp">Livro</a></li>
+                <li><a href="requisicao.jsp">Requisação</a></li>
             </ul>
         </section>
-        <button onclick="window.location.href='cadastroPessoa.jsp'" class="btn-nova-pessoa">Nova Pessoa</button>
+
+        <button onclick="window.location.href='cadastroLeitor.jsp'" class="btn-nova-pessoa">Novo Leitor</button>
         <section class="main-section"> 
           <table width="100%" class="table-main"> 
                 <thead>
                     <tr>
-                        <td> Id Pessoa </td>
-                        <td> Primeiro Nome </td>
-                        <td> Último Nome </td>
-                        <td> Numbi </td>
-                        <td> Data de Nascimento </td>       
+                        <td> Id Leitor </td>
+                        <td> Primeiro </td>
+                        <td> Último Nome </td>     
                     </tr>
                 </thead> 
 
                 <%
-                     PessoaDAO pessoaDao = new PessoaDAO();
-                     ArrayList<Pessoa> listaPessoas = pessoaDao.listarPessoas();
+                     LeitorDAO leitorDao = new LeitorDAO();
+                     ArrayList<Pessoa> listaPessoas = leitorDao.listarLeitor();
                          
                      for(Pessoa pessoa : listaPessoas)
                      {
@@ -60,8 +58,6 @@
                         <td><%= pessoa.getIdPessoa() %></td>
                         <td><%= pessoa.getPrimeiroNome() %> </td>
                         <td><%= pessoa.getUltimoNome() %> </td>
-                        <td><%= pessoa.getNumBi() %> </td>
-                        <td><%= pessoa.getDataNasc() %> </td>
                         <td><a href="editarPessoa">Editar</a></td>
                         <td><a href="eliminarPessoa">Eliminar</a></td>
                     </tr>  
@@ -73,5 +69,6 @@
                    %>
           </table>
         </section>
+        
     </body>
 </html>

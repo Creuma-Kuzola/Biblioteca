@@ -26,11 +26,11 @@
             <ul class="ul-div">
                 <li> <a href="#">Index</a></li>
                 <li> <a href="pessoa.jsp">Pessoa</a></li>
-                <li> <a href="cadastroLeitor.jsp">Leitor</a> </li>
-                <li> <a href="cadastroAutor.jsp">Autor</a></li>
-                <li><a href="">Editora</a></li>
-                <li><a href="cadastroLivro.jsp">Livro</a></li>
-                <li><a href="cadastroRequisicao.jsp">Requisação</a></li>
+                <li> <a href="leitor.jsp">Leitor</a> </li>
+                <li> <a href="autor.jsp">Autor</a></li>
+                <li><a href="editora.jsp">Editora</a></li>
+                <li><a href="livro.jsp">Livro</a></li>
+                <li><a href="requisicao.jsp">Requisação</a></li>
               
             </ul>
         </section>

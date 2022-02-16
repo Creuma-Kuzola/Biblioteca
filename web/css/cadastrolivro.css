@@ -1,4 +1,5 @@
 
+
 *{
     margin: 0;
     padding: 0;
@@ -21,7 +22,6 @@
     height: 8vh;
     background-color: #c4c4c4;
     margin-left: 20vw;
-    margin-top: -3.8vh;
 }
 
 body{
@@ -79,7 +79,7 @@ input[type="search"]{
 }
 
 
-.ul-div li:nth-child(3){
+.ul-div li:nth-child(6){
     background-color:#fff;
     font-weight: bolder;
 }

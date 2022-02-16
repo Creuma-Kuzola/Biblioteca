@@ -5,6 +5,8 @@
  */
 package modelo.autor;
 
+import java.sql.Date;
+
 /**
  *
  * @author creuma
@@ -14,6 +16,7 @@ public class Autor {
     private int idAutor;
     private int fkPessoa;
     private String pseudonimo;
+    private Date dataCadastroAutor;
 
     public int getIdAutor() {
         return idAutor;
@@ -37,6 +40,14 @@ public class Autor {
 
     public void setFkPessoa(int fkPessoa) {
         this.fkPessoa = fkPessoa;
+    }
+
+    public Date getDataCadastroAutor() {
+        return dataCadastroAutor;
+    }
+
+    public void setDataCadastroAutor(Date dataCadastroAutor) {
+        this.dataCadastroAutor = dataCadastroAutor;
     }
     
 }

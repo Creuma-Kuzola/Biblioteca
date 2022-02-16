@@ -1,23 +1,19 @@
 <%-- 
-    Document   : pessoa
-    Created on : Jan 25, 2022, 3:50:00 PM
+    Document   : requisicao
+    Created on : Feb 15, 2022, 10:31:10 AM
     Author     : creuma
 --%>
 
-<%@page import="modelo.pessoa.Pessoa"%>
-<%@page import="modelo.pessoa.PessoaDAO"%>
-<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Pessoa</title>
-        <link rel="stylesheet" href="css/cadastropessoa.css">
+        <title>Requisicao</title>
+        <link rel="stylesheet" href="css/requisicao.css">
     </head>
     <body>
-
-         <header class="header-div">
+        <header class="header-div">
             <nav class="nav-div">
                 <input type="search" placeholder="pesquisar">
             </nav>
@@ -26,29 +22,30 @@
             <h1 class="h1-nome-biblioteca">Leia-Biblioteca</h1>
             <ul class="ul-div">
                 <li> <a href="index.jsp">Index</a></li>
-                <li> <a href="#">Pessoa</a></li>
+                <li> <a href="pessoa.jsp">Pessoa</a></li>
                 <li> <a href="leitor.jsp">Leitor</a> </li>
-                <li> <a href="cadastroAutor.jsp">Autor</a></li>
-                <li><a href="">Editora</a></li>
-                <li><a href="cadastroLivro.jsp">Livro</a></li>
-                <li><a href="cadastroRequisicao.jsp">Requisação</a></li>
-              
+                <li> <a href="autor.jsp">Autor</a></li>
+                <li><a href="editora.jsp">Editora</a></li>
+                <li><a href="livro.jsp">Livro</a></li>
+                <li><a href="#">Requisação</a></li>
             </ul>
         </section>
-        <button onclick="window.location.href='cadastroPessoa.jsp'" class="btn-nova-pessoa">Nova Pessoa</button>
+        <button onclick="window.location.href='cadastroRequisicao.jsp'" class="btn-nova-pessoa">Nova Requisicao</button>
         <section class="main-section"> 
           <table width="100%" class="table-main"> 
                 <thead>
                     <tr>
-                        <td> Id Pessoa </td>
-                        <td> Primeiro Nome </td>
-                        <td> Último Nome </td>
-                        <td> Numbi </td>
-                        <td> Data de Nascimento </td>       
+                        <td> Id Requisicao </td>
+                        <td> Titulo do livro </td>
+                        <td>Primeiro Nome do leitor </td>
+                        <td>Ultimo Nome do leitor </td>
+                        <td> Data da requisicao </td>
+                        <td> Data de entrega </td> 
+                        <td>Entregou</td>
                     </tr>
                 </thead> 
 
-                <%
+                <%--   <%
                      PessoaDAO pessoaDao = new PessoaDAO();
                      ArrayList<Pessoa> listaPessoas = pessoaDao.listarPessoas();
                          
@@ -71,7 +68,7 @@
                     }
                                
                    %>
-          </table>
+          </table>--%>
         </section>
     </body>
 </html>

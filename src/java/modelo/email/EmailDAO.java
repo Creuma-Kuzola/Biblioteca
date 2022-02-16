@@ -62,7 +62,7 @@ public class EmailDAO {
 
     }
     
-    public int getLastInsertedEmail()
+    public int getLastInsertedEmail(int idPessoa)
     {
         ArrayList<Email> listaEmail = new ArrayList<>();
         try {
@@ -74,12 +74,7 @@ public class EmailDAO {
             
             while( resultSet.next())
             {
-                Email email = new Email();
-                email.setIdEmail(resultSet.getInt(1));
-                
-                System.out.println("Valor encontrado no email +" +email.getIdEmail());
-               
-                return email.getIdEmail();
+                return resultSet.getInt(1);
                 
             }
         
